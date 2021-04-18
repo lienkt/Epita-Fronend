@@ -1,8 +1,4 @@
-// console.log('Hello!');
-// alert('Hello world!')
-
 let table = document.getElementById('table_game')
-// table.style.background = "pink"
 let cols = document.querySelectorAll(".col")
 let current_player = 1;
 let freeCells = 9;
@@ -42,7 +38,7 @@ cols.forEach((col) => {
                     }
                 }
                 if (flag == 1) {
-                    alert("Player" + current_player +"win!");
+                    alert("Player" + current_player +" win!");
                     freeCells = 1;
                 } else {
                     // Check for the cells in the same column
