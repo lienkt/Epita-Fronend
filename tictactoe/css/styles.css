@@ -35,16 +35,27 @@ body {
 }
 
 .restart {
-    background-color: aqua;
+    background-color: #04AA6D;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.new-game {
+    background-color: #04AA6D;
     width: fit-content;
     display: none;
     cursor: pointer;
     font-size: 20px;
     margin-top: 10px;
     padding: 10px;
+    border-radius: 5px;
 }
 
-.restart.active {
+.new-game.active {
     display: block;
 }
 
@@ -57,8 +68,8 @@ body {
 
 .col {
     border: 1px solid black;
-	width: 150px;
-	height: 150px;
+	width: 70px;
+	height: 70px;
     text-align: center;
 }
 

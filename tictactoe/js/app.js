@@ -48,10 +48,29 @@ cols.forEach((col) => {
 })
 
 document.querySelector('.restart').onclick = (e) => {
+    scores = {
+        1: 0,
+        2: 0,
+    }
+    document.querySelector('.player1_score').innerHTML = scores[current_player];
+    document.querySelector('.player2_score').innerHTML = scores[current_player];
     freeCells = 9;
     document.querySelector('.result').innerHTML = "";
-    // Remove the active class from the restart button
-    document.querySelector('.restart').classList.remove("active");
+    cols.forEach((col) => {
+        col.innerHTML = "";
+    })
+    for (var cell_key in cells) {
+        cells[cell_key] = 0;
+    }
+    // Remove the active class from the new-game button
+    document.querySelector('.new-game').classList.remove("active");
+}
+
+document.querySelector('.new-game').onclick = (e) => {
+    freeCells = 9;
+    document.querySelector('.result').innerHTML = "";
+    // Remove the active class from the new-game button
+    document.querySelector('.new-game').classList.remove("active");
     cols.forEach((col) => {
         col.innerHTML = "";
     })
@@ -65,7 +84,7 @@ function showResult() {
     document.querySelector('.player'+current_player+'_score').innerHTML = scores[current_player];
     document.querySelector('.result').innerHTML = "Player " + current_player +" win!";
     // Add the active class to the next player
-    document.querySelector('.restart').classList.add("active");
+    document.querySelector('.new-game').classList.add("active");
     freeCells = 1;
 }
 
