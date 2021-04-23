@@ -63,7 +63,7 @@ body {
     border-spacing: 10px;
     border-collapse: collapse;
     margin: 100px auto;
-    background: azure;
+    background: #E7E9EB;
 }
 
 .col {
@@ -74,5 +74,5 @@ body {
 }
 
 .col:hover {
-	background: #E3DCCC;
+	background: #ddffff;
 }
