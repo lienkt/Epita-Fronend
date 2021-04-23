@@ -27,11 +27,14 @@ body {
     font-size: 30px;
     color: red;
 }
-
+.message,.new-game {
+    display: flex;
+    justify-content: center;
+}
 .result {
-    font-size: 25px;
-    color: red;
-    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
 }
 
 .restart {
@@ -44,25 +47,30 @@ body {
     border-radius: 5px;
 }
 
-.new-game {
+.new-game span {
     background-color: #04AA6D;
-    width: fit-content;
-    display: none;
+    width: 70px;
     cursor: pointer;
     font-size: 20px;
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
+    justify-content: center;
+}
+.new-game {
+    display: none;
+    justify-content: center;
 }
 
+
 .new-game.active {
-    display: block;
+    display: flex;
 }
 
 #table_game {
     border-spacing: 10px;
     border-collapse: collapse;
-    margin: 100px auto;
+    margin: 50px auto;
     background: #E7E9EB;
 }
 
