@@ -1,9 +1,9 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const productModel = new mongoose.Schema({
     name: {
         type: String,
-        require: true
+        require: true,
     },
     price: {
         type: Number,
@@ -12,7 +12,7 @@ const productModel = new mongoose.Schema({
 }, {
     timestamps: {
         createdAt: 'created_at',
-        updateAt: 'updated_at'
+        updatedAt: 'updated_at'
     }
 })
 
