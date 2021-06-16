@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { getProducts } from '../../services/Products'
 
 import styles from './ListProducts.module.css'
+import FormAddProduct from './FormAddProduct'
 
-export default () => {
+const ListProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -14,10 +15,25 @@ export default () => {
         })()
 
     }, [])
+	
+	/*
+	const [posts, setPosts] = useState([])
 
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch(`${process.env.REACT_APP_API_URL}/posts`)
+        .then(response => response.json())
+        .then(json => {
+            console.log(json)
+            setPosts(json)
+        })
+    }, [])
+	*/
+	
     return (
         <div>
-            <h1 className={styles.title}>List of products</h1>
+            <FormAddProduct />
+            <h2 className={styles.title}>List of products</h2>
             <ul>
                 { products && products.map((prod) => (
                     <li key={prod._id}>{prod.name} - Price: {prod.price}</li>
@@ -26,3 +42,4 @@ export default () => {
         </div>
     )
 }
+export default ListProducts;
