@@ -6,7 +6,7 @@ import Calculate from './pages/Calculate'
 import BlogPage from './pages/Blog'
 import LoginPage from './pages/Login'
 import Products from './pages/Products'
-
+import EditProducts from './pages/EditProducts'
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
         <Route path="/blog" exact={true} component={BlogPage} />
         <Route path="/products" exact={true} component={Products} />
         <Route path="/login" exact={true} component={LoginPage} />
+		<Route path='/products/:productId/edit' exact={true} component={EditProducts} />
       </Switch>
     </BrowserRouter>
   );
